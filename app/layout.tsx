@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { ClarityAnalytics } from "@/components/clarity-analytics";
 import "./globals.css";
 
 const siteUrl = "https://www.kael.im";
@@ -63,6 +64,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body>
+        <ClarityAnalytics />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-W5F1Y6479G"
           strategy="afterInteractive"
