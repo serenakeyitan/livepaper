@@ -113,6 +113,11 @@ kael-landing-page/
 - [Tailwind CSS 文档](https://tailwindcss.com/docs) - Tailwind CSS 使用指南
 - [Vercel 部署文档](https://nextjs.org/docs/app/building-your-application/deploying) - Next.js 部署详细说明
 
+## Component Repo
+
+- https://www.shadcnblocks.com/
+- https://tailark.com/
+
 ## 开发团队
 
 Unispark Team
