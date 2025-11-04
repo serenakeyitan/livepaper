@@ -1,3 +1,6 @@
+import type { Metadata } from "next";
+import Script from "next/script";
+
 import { 
   BookOpen,
   Search,
@@ -16,9 +19,143 @@ import { Faq1 } from "@/components/faq1";
 import FooterSection from "@/components/footer";
 import { Process1 } from "@/components/process1";
 
+const pageTitle = "Kael AI 论文助手｜多文档深度理解与公式解析的科研搭档";
+const pageDescription =
+  "Kael 是面向研究者的 AI 论文助手，支持 50+ 篇文献的多文档深度对话、精准公式与图表解析、智能论文推荐和跨平台阅读体验，帮助你更快完成综述、实验设计与论文写作。";
+const pageKeywords = [
+  "Kael",
+  "AI 论文助手",
+  "多文档阅读",
+  "公式解析",
+  "学术搜索",
+  "论文推荐",
+  "科研效率工具",
+  "学术 AI",
+  "研究助手",
+];
+const pageUrl = "https://www.kael.im/landingpage1";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: pageKeywords,
+  alternates: {
+    canonical: "/landingpage1",
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    type: "website",
+    locale: "zh_CN",
+    images: [
+      {
+        url: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
+        width: 1200,
+        height: 630,
+        alt: "Kael AI 论文助手产品展示",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+    images: [
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const softwareJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Kael AI 论文助手",
+  applicationCategory: "ProductivityApplication",
+  operatingSystem: "Web",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "CNY",
+    availability: "https://schema.org/InStock",
+    description: "提供免费试用，支持上传 3 篇论文与 50 次对话",
+  },
+  description: pageDescription,
+  url: pageUrl,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "10000",
+  },
+  applicationSubCategory: "AI Research Assistant",
+  featureList: [
+    "多文档深度理解",
+    "智能论文推荐",
+    "公式与图表解析",
+    "跨平台阅读体验",
+  ],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Kael 支持哪些语言的论文？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "目前支持英文、中文、德文、法文、日文等 30+ 种语言的论文识别和对话。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "我的数据安全吗？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "所有上传的文档采用端到端加密，仅你本人可以访问，我们不会将文档用于 AI 训练。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "和 ChatGPT 直接上传 PDF 有什么区别？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Kael 专为学术场景优化：更准确的公式识别、更好的长文档处理、专业的引用追踪，以及学术论文推荐系统。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "有免费试用吗？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "新用户可以免费上传 3 篇论文并进行 50 次对话，无需信用卡。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "支持团队协作吗？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "团队版提供共享文献库、协作注释、统一计费等功能，适合团队一起管理研究资料。",
+      },
+    },
+  ],
+};
+
 export default function LandingPage1() {
   return (
     <main>
+      <Script id="kael-software-ld" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(softwareJsonLd)}
+      </Script>
+      <Script id="kael-faq-ld" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(faqJsonLd)}
+      </Script>
       <Hero1
         heading="让论文阅读不再是负担"
         subheading="多文档深度对话，精准解析每一个公式"
@@ -288,4 +425,3 @@ export default function LandingPage1() {
     </main>
   );
 }
-

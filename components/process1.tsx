@@ -38,7 +38,7 @@ const Process1 = ({
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-6 lg:gap-20">
           <div className="top-10 col-span-2 h-fit w-fit gap-3 space-y-7 py-8 lg:sticky">
             <div className="relative w-fit text-5xl font-semibold tracking-tight lg:text-7xl">
-              <h1 className="w-fit">{title}</h1>
+              <h2 className="w-fit">{title}</h2>
               <Asterisk className="absolute -right-2 -top-2 size-5 text-orange-500 md:size-10 lg:-right-14" />
             </div>
           </div>
