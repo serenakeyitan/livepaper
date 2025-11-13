@@ -33,14 +33,14 @@ const pageKeywords = [
   "学术 AI",
   "研究助手",
 ];
-const pageUrl = "https://www.kael.im/landingpage1";
+const pageUrl = "https://www.kael.im/p/landingpage1";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: pageKeywords,
   alternates: {
-    canonical: "/landingpage1",
+    canonical: "/p/landingpage1",
   },
   openGraph: {
     title: pageTitle,
