@@ -144,9 +144,250 @@
       max-width: 1280px;
     }
   }
-  @media (min-width: 1536px) {
+@media (min-width: 1536px) {
     .container {
       max-width: 1536px;
     }
+  }
+}
+
+.chat-with-pdfs-theme {
+  --background: hsl(220 60% 98%);
+  --foreground: hsl(220 20% 10%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(220 20% 10%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(220 20% 10%);
+  --primary: hsl(195 90% 42%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(220 15% 95%);
+  --secondary-foreground: hsl(220 20% 10%);
+  --muted: hsl(220 15% 96%);
+  --muted-foreground: hsl(220 10% 50%);
+  --accent: hsl(195 90% 42%);
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(220 15% 90%);
+  --input: hsl(220 15% 90%);
+  --ring: hsl(195 90% 42%);
+  --radius: 0.75rem;
+  --gradient-hero: linear-gradient(180deg, hsl(220 60% 96%), hsl(220 50% 98%));
+  --gradient-section: linear-gradient(180deg, hsl(220 50% 98%), hsl(0 0% 100%));
+  --shadow-lg: 0 10px 40px -15px hsl(195 90% 42% / 0.15);
+  --shadow-xl: 0 20px 60px -20px hsl(195 90% 42% / 0.25);
+  --sidebar-background: hsl(0 0% 98%);
+  --sidebar-foreground: hsl(240 5.3% 26.1%);
+  --sidebar-primary: hsl(240 5.9% 10%);
+  --sidebar-primary-foreground: hsl(0 0% 98%);
+  --sidebar-accent: hsl(240 4.8% 95.9%);
+  --sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --sidebar-border: hsl(220 13% 91%);
+  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+}
+
+.chat-with-pdfs-theme.dark {
+  --background: hsl(220 25% 8%);
+  --foreground: hsl(0 0% 98%);
+  --card: hsl(220 20% 12%);
+  --card-foreground: hsl(0 0% 98%);
+  --popover: hsl(220 20% 12%);
+  --popover-foreground: hsl(0 0% 98%);
+  --primary: hsl(195 90% 42%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(220 20% 15%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --muted: hsl(220 20% 15%);
+  --muted-foreground: hsl(220 10% 65%);
+  --accent: hsl(195 90% 42%);
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(220 20% 20%);
+  --input: hsl(220 20% 20%);
+  --ring: hsl(195 90% 42%);
+  --sidebar-background: hsl(240 5.9% 10%);
+  --sidebar-foreground: hsl(240 4.8% 95.9%);
+  --sidebar-primary: hsl(224.3 76.3% 48%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(240 3.7% 15.9%);
+  --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
+  --sidebar-border: hsl(240 3.7% 15.9%);
+  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+}
+
+@layer utilities {
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(30px);
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  section.animate-on-scroll,
+  footer.animate-on-scroll {
+    opacity: 1 !important;
+  }
+
+  section.animate-on-scroll > .container,
+  footer.animate-on-scroll > .container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  section.animate-on-scroll.visible > .container,
+  footer.animate-on-scroll.visible > .container {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  section.animate-on-scroll:not(:has(.container)) > *:first-child,
+  footer.animate-on-scroll:not(:has(.container)) > *:first-child {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  section.animate-on-scroll.visible:not(:has(.container)) > *:first-child,
+  footer.animate-on-scroll.visible:not(:has(.container)) > *:first-child {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
