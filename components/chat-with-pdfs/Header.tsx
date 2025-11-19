@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { START_FOR_FREE_URL } from "./constants";
+import { gtagSendEvent } from "./gtag-utils";
 import { Globe } from "lucide-react";
 
 const KAEL_LOGO = "/chat-with-pdfs/kael-logo.png";
@@ -37,10 +40,16 @@ const Header = () => {
               <span className="font-medium text-sm sm:text-lg">English</span>
             </button>
             
-            <Button asChild variant="hero" size="default" className="rounded-full hover:scale-105 transition-all duration-300 px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-6 text-sm sm:text-base lg:text-lg">
-              <a href={START_FOR_FREE_URL} target="_blank" rel="noopener noreferrer">
-                Get 1 month Pro Plan for free
-              </a>
+            <Button 
+              variant="hero" 
+              size="default" 
+              className="rounded-full hover:scale-105 transition-all duration-300 px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-6 text-sm sm:text-base lg:text-lg"
+              onClick={(e) => {
+                e.preventDefault();
+                gtagSendEvent(START_FOR_FREE_URL);
+              }}
+            >
+              Get 1 month Pro Plan for free
             </Button>
           </div>
         </div>

@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { START_FOR_FREE_URL } from "./constants";
+import { gtagSendEvent } from "./gtag-utils";
 import { Check } from "lucide-react";
 
 const HERO_IMAGE = "/chat-with-pdfs/kael_interface_1_bw.png";
@@ -33,19 +36,20 @@ const Hero = () => {
               {/* CTA Button */}
               <div className="pt-2 sm:pt-4 animate-fade-in-up animation-delay-300">
                 <Button
-                  asChild
                   variant="hero"
                   size="lg"
                   className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-7 h-auto hover:scale-105 transition-transform duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    gtagSendEvent(START_FOR_FREE_URL);
+                  }}
                 >
-                  <a href={START_FOR_FREE_URL} target="_blank" rel="noopener noreferrer">
-                    <img
-                      src={WEB_EXTENSION_ICON}
-                      alt="Web Extension"
-                      className="w-6 h-6 sm:w-7 sm:h-7 lg:w-9 lg:h-9 mr-2 sm:mr-3 object-contain"
-                    />
-                   Get 1 month Pro Plan for free
-                  </a>
+                  <img
+                    src={WEB_EXTENSION_ICON}
+                    alt="Web Extension"
+                    className="w-6 h-6 sm:w-7 sm:h-7 lg:w-9 lg:h-9 mr-2 sm:mr-3 object-contain"
+                  />
+                  Get 1 month Pro Plan for free
                 </Button>
               </div>
 

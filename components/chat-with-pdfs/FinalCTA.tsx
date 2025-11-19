@@ -1,8 +1,16 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { START_FOR_FREE_URL } from "./constants";
+import { gtagSendEvent } from "./gtag-utils";
 import { Check } from "lucide-react";
 
 const FinalCTA = () => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    gtagSendEvent(START_FOR_FREE_URL);
+  };
+
   return (
     <section id="pricing" className="w-full py-12 sm:py-16 lg:py-24 bg-neutral-900 dark:bg-neutral-900 relative overflow-hidden">
       {/* Decorative background squares */}
@@ -28,10 +36,13 @@ const FinalCTA = () => {
           </p>
 
           <div className="flex justify-center pt-2 sm:pt-4 animate-fade-in-up animation-delay-300">
-            <Button asChild variant="hero" size="lg" className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-7 hover:scale-110 transition-transform duration-300 w-full sm:w-auto">
-              <a href={START_FOR_FREE_URL} target="_blank" rel="noopener noreferrer">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-7 hover:scale-110 transition-transform duration-300 w-full sm:w-auto"
+              onClick={handleClick}
+            >
               Get 1 month Pro Plan for free ➜
-              </a>
             </Button>
           </div>
 
