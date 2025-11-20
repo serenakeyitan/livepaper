@@ -10,7 +10,7 @@ const KAEL_LOGO = "/chat-with-pdfs/kael-logo.png";
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-neutral-700/40 bg-white shadow-md transition-colors animate-fade-in">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-16">
+      <div className="container mx-auto px-10 sm:px-12 lg:px-16">
         <div className="flex h-16 sm:h-20 items-center justify-between gap-4">
           {/* Logo */}
           <div className="flex items-center animate-fade-in-right overflow-visible p-2">

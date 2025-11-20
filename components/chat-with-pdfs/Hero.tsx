@@ -18,27 +18,27 @@ const LOGOS = {
 const Hero = () => {
   return (
     <>
-      <section className="w-full pt-12 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 bg-gradient-to-b from-[#D6EBFF] via-[#E8F4FF] to-white dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-800 transition-colors">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 sm:gap-12 lg:gap-16 items-center max-w-[1900px] mx-auto">
+      <section className="w-full pt-20 sm:pt-24 lg:pt-24 pb-12 sm:pb-16 lg:pb-12 bg-gradient-to-b from-[#D6EBFF] via-[#E8F4FF] to-white dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-800 transition-colors">
+        <div className="container mx-auto px-10 sm:px-12 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-10 sm:gap-14 lg:gap-16 items-center max-w-[1900px] mx-auto">
             {/* Left Column - Text Content */}
-            <div className="space-y-6 sm:space-y-8 lg:space-y-10 animate-fade-in-up">
-              {/* Main Heading */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[72px] xl:text-[80px] font-extrabold tracking-tight leading-[1.1] sm:leading-[1.05] text-neutral-900 dark:text-white max-w-2xl animate-fade-in-up animation-delay-100">
+            <div className="space-y-0 lg:space-y-10 animate-fade-in-up text-center lg:text-left">
+              {/* Main Heading - Mobile: Bigger and more prominent */}
+              <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[80px] font-extrabold tracking-tight leading-[1.15] sm:leading-[1.1] text-neutral-900 dark:text-white max-w-2xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-100 mb-8 lg:mb-0">
                 The AI Research Assistant for Scholars
               </h1>
               
               {/* Subtitle */}
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-xl animate-fade-in-up animation-delay-200">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-200 mb-10 lg:mb-0 px-2 sm:px-0">
                 Chat across multiple research papers with precise, evidence-based answers — no confusion, no noise.
               </p>
 
-              {/* CTA Button */}
-              <div className="pt-2 sm:pt-4 animate-fade-in-up animation-delay-300">
+              {/* CTA Button - Mobile: Bigger and centered */}
+              <div className="mb-6 lg:mb-8 lg:pt-4 animate-fade-in-up animation-delay-300 flex justify-center lg:justify-start w-full">
                 <Button
                   variant="hero"
                   size="lg"
-                  className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-7 h-auto hover:scale-105 transition-transform duration-300"
+                  className="w-full sm:w-auto lg:w-auto rounded-xl text-lg sm:text-lg lg:text-lg px-8 py-6 sm:px-10 sm:py-6 lg:px-10 lg:py-7 h-auto hover:scale-105 transition-transform duration-300 flex items-center justify-center shadow-lg hover:shadow-xl"
                   onClick={(e) => {
                     e.preventDefault();
                     gtagSendEvent(START_FOR_FREE_URL);
@@ -47,22 +47,22 @@ const Hero = () => {
                   <img
                     src={WEB_EXTENSION_ICON}
                     alt="Web Extension"
-                    className="w-6 h-6 sm:w-7 sm:h-7 lg:w-9 lg:h-9 mr-2 sm:mr-3 object-contain"
+                    className="w-8 h-8 sm:w-7 sm:h-7 lg:w-9 lg:h-9 mr-3 sm:mr-3 object-contain"
                   />
                   Get 1 month Pro Plan for free
                 </Button>
               </div>
 
               {/* Free tier label */}
-              <div className="flex items-start sm:items-center gap-2 text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 animate-fade-in-up animation-delay-400">
-                <Check className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0 mt-0.5 sm:mt-0" />
-                <span>Free upload of up to 10 papers and 50 conversations</span>
+              <div className="flex items-center justify-center lg:justify-start gap-2.5 text-base sm:text-lg lg:text-lg text-neutral-600 dark:text-neutral-300 animate-fade-in-up animation-delay-400 lg:mt-4">
+                <Check className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
+                <span className="text-center lg:text-left">Free upload of up to 10 papers and 50 conversations</span>
               </div>
             </div>
 
             {/* Right Column - Hero Image */}
-            <div className="relative animate-fade-in-right animation-delay-200">
-              <div className="relative rounded-2xl overflow-visible p-4">
+            <div className="relative animate-fade-in-right animation-delay-200 mt-4 lg:mt-0">
+              <div className="relative rounded-2xl overflow-visible p-2 sm:p-4">
                 <img 
                   src={HERO_IMAGE} 
                   alt="AI Research Assistant Interface showing multi-document conversation" 
@@ -75,10 +75,10 @@ const Hero = () => {
       </section>
 
       {/* Trusted By Section */}
-      <section className="w-full bg-white dark:bg-neutral-900 pt-6 sm:pt-8 pb-12 sm:pb-16 lg:pb-20 transition-colors">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-16">
-          <div className="max-w-[1800px] mx-auto text-center space-y-8 sm:space-y-12 lg:space-y-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-900 dark:text-white animate-fade-in-up animation-delay-200 px-4">
+      <section className="w-full bg-white dark:bg-neutral-900 pt-12 sm:pt-16 lg:pt-8 pb-16 sm:pb-20 lg:pb-20 transition-colors">
+        <div className="container mx-auto px-10 sm:px-12 lg:px-16">
+          <div className="max-w-[1800px] mx-auto text-center space-y-10 sm:space-y-14 lg:space-y-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-neutral-900 dark:text-white animate-fade-in-up animation-delay-200 px-4">
               Trusted by 10,000+ researchers worldwide
             </h2>
             

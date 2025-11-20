@@ -25,7 +25,7 @@ const FinalCTA = () => {
         <div className="absolute bottom-40 right-1/4 w-12 h-12 bg-primary/6 rounded-2xl hidden sm:block" />
       </div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
+      <div className="container mx-auto px-10 sm:px-12 lg:px-16 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8 lg:space-y-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight animate-fade-in-up px-4">
             Ready to take your research to the next level?
@@ -35,18 +35,18 @@ const FinalCTA = () => {
             Join over 10,000 researchers who use Kael as their intelligent research partner.
           </p>
 
-          <div className="flex justify-center pt-2 sm:pt-4 animate-fade-in-up animation-delay-300">
+          <div className="flex justify-center pt-4 sm:pt-6 animate-fade-in-up animation-delay-300">
             <Button 
               variant="hero" 
               size="lg" 
-              className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-7 hover:scale-110 transition-transform duration-300 w-full sm:w-auto"
+              className="rounded-xl text-base sm:text-lg lg:text-xl px-10 py-5 sm:px-12 sm:py-6 lg:px-16 lg:py-8 hover:scale-110 transition-transform duration-300 w-full max-w-md sm:w-auto shadow-xl hover:shadow-2xl"
               onClick={handleClick}
             >
               Get 1 month Pro Plan for free ➜
             </Button>
           </div>
 
-          <p className="text-sm sm:text-base text-neutral-400 px-4">
+          <p className="text-sm sm:text-base text-neutral-400 px-4 mt-6 lg:mt-8">
             No credit card required · Setup in under 1 minute
           </p>
 

@@ -55,7 +55,7 @@ const SocialProof = () => {
     <>
       {/* Trust Section */}
       <section ref={trustRef} className={`w-full py-12 sm:py-16 lg:py-20 bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-700/50 ${trustVisible ? 'animate-on-scroll visible' : 'animate-on-scroll'}`}>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-16">
+        <div className="container mx-auto px-10 sm:px-12 lg:px-16">
           <h2 className="text-center text-2xl sm:text-3xl font-semibold text-neutral-900 dark:text-white mb-8 sm:mb-12 lg:mb-16 px-4">
             Trusted by Researchers Worldwide
           </h2>
@@ -81,7 +81,7 @@ const SocialProof = () => {
 
       {/* Testimonials Section */}
       <section ref={testimonialsRef} className={`w-full py-12 sm:py-16 lg:py-24 transition-colors dark:bg-neutral-900 ${testimonialsVisible ? 'animate-on-scroll visible' : 'animate-on-scroll'}`} style={{backgroundImage: 'linear-gradient(to bottom, white 0%, rgb(229 229 229) 15%, rgb(163 163 163) 35%, rgb(115 115 115) 55%, rgb(64 64 64) 75%, rgb(23 23 23) 100%)'}}>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-16">
+        <div className="container mx-auto px-10 sm:px-12 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 max-w-6xl mx-auto items-stretch">
             {testimonials.map((testimonial, index) => (
               <div key={testimonial.author} className={`relative h-full animate-fade-in-up ${index === 0 ? 'animation-delay-200' : 'animation-delay-400'}`}>

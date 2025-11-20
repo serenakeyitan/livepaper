@@ -48,7 +48,7 @@ const Features = () => {
   
   return (
     <section id="features" className="w-full py-12 sm:py-16 lg:py-24 bg-neutral-800">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-16">
+      <div className="container mx-auto px-10 sm:px-12 lg:px-16">
         {/* Feature 1 */}
         <div ref={feature1Ref} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center mb-16 sm:mb-24 lg:mb-40 max-w-[1800px] mx-auto ${feature1Visible ? 'animate-on-scroll visible' : 'animate-on-scroll'}`}>
           <div className="space-y-4 sm:space-y-6">

@@ -28,7 +28,7 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="w-full py-12 sm:py-16 lg:py-24 bg-neutral-900 dark:bg-neutral-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-16 max-w-5xl">
+      <div className="container mx-auto px-10 sm:px-12 lg:px-16 max-w-5xl">
         <div className="flex flex-col items-start">
           {/* Icon */}
           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6 sm:mb-8 animate-scale-in">

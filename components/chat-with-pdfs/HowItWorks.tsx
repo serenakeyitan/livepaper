@@ -13,7 +13,7 @@ const HowItWorks = () => {
   
   return (
     <section id="how-it-works" ref={sectionRef} className={`w-full py-12 sm:py-16 lg:py-24 bg-white dark:bg-gradient-to-b dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 ${sectionVisible ? 'animate-on-scroll visible' : 'animate-on-scroll'}`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-16">
+      <div className="container mx-auto px-10 sm:px-12 lg:px-16">
         <div className="flex w-full max-w-[900px] mx-auto flex-col items-center gap-6 sm:gap-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white text-center animate-fade-in-up px-4">
             Kael Research Flow
