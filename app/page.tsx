@@ -5,13 +5,14 @@ import Hero from "@/components/chat-with-pdfs/Hero";
 import Features from "@/components/chat-with-pdfs/Features";
 import HowItWorks from "@/components/chat-with-pdfs/HowItWorks";
 import SocialProof from "@/components/chat-with-pdfs/SocialProof";
+import UseCases from "@/components/chat-with-pdfs/UseCases";
 import FAQ from "@/components/chat-with-pdfs/FAQ";
 import FinalCTA from "@/components/chat-with-pdfs/FinalCTA";
 import Footer from "@/components/chat-with-pdfs/Footer";
 
-const pageTitle = "Chat with PDFs｜Kael AI Research Assistant";
+const pageTitle = "LivePaper — Turn Your Research Paper Into Motion";
 const pageDescription =
-  "Upload up to 10 research papers, chat across documents, and get trustworthy answers augmented with formulas, citations, and workflow guidance.";
+  "Upload a PDF and LivePaper transforms static research into an animated, interactive experience with interactive charts, motion diagrams, and multimedia.";
 const pageUrl = "https://www.kael.im";
 
 export const metadata: Metadata = {
@@ -42,6 +43,7 @@ export default function Home() {
         <Features />
         <HowItWorks />
         <SocialProof />
+        <UseCases />
         <FAQ />
         <FinalCTA />
       </main>

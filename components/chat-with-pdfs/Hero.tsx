@@ -24,17 +24,17 @@ const Hero = () => {
             {/* Left Column - Text Content */}
             <div className="space-y-0 lg:space-y-10 animate-fade-in-up text-center lg:text-left">
               {/* Main Heading - Mobile: Bigger and more prominent */}
-              <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[80px] font-extrabold tracking-tight leading-[1.15] sm:leading-[1.1] text-neutral-900 dark:text-white max-w-2xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-100 mb-8 lg:mb-0">
-                The AI Research Assistant for Scholars
+              <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[80px] font-extrabold tracking-tight leading-[1.15] sm:leading-[1.1] text-neutral-900 dark:text-white max-w-2xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-100 mb-8 lg:mb-12">
+                Turn Your Research Paper Into Motion
               </h1>
               
               {/* Subtitle */}
               <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-200 mb-10 lg:mb-0 px-2 sm:px-0">
-                Chat across multiple research papers with precise, evidence-based answers — no confusion, no noise.
+                Upload a PDF and LivePaper transforms static research into an animated, interactive experience.
               </p>
 
               {/* CTA Button - Mobile: Bigger and centered */}
-              <div className="mb-6 lg:mb-8 lg:pt-4 animate-fade-in-up animation-delay-300 flex justify-center lg:justify-start w-full">
+              <div className="mb-6 lg:mb-8 lg:pt-12 animate-fade-in-up animation-delay-300 flex justify-center lg:justify-start w-full">
                 <Button
                   variant="hero"
                   size="lg"
@@ -49,15 +49,11 @@ const Hero = () => {
                     alt="Web Extension"
                     className="w-8 h-8 sm:w-7 sm:h-7 lg:w-9 lg:h-9 mr-3 sm:mr-3 object-contain"
                   />
-                  Get 1 month Pro Plan for free
+                  Get 1 Month Pro Plan for Free
                 </Button>
               </div>
 
               {/* Free tier label */}
-              <div className="flex items-center justify-center lg:justify-start gap-2.5 text-base sm:text-lg lg:text-lg text-neutral-600 dark:text-neutral-300 animate-fade-in-up animation-delay-400 lg:mt-4">
-                <Check className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
-                <span className="text-center lg:text-left">Free upload of up to 10 papers and 50 conversations</span>
-              </div>
             </div>
 
             {/* Right Column - Hero Image */}
@@ -79,7 +75,7 @@ const Hero = () => {
         <div className="container mx-auto px-10 sm:px-12 lg:px-16">
           <div className="max-w-[1800px] mx-auto text-center space-y-10 sm:space-y-14 lg:space-y-16">
             <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-neutral-900 dark:text-white animate-fade-in-up animation-delay-200 px-4">
-              Trusted by 10,000+ researchers worldwide
+              Trusted by researchers worldwide
             </h2>
             
             {/* University Logos - Scrolling */}

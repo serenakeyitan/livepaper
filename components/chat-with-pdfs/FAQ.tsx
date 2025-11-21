@@ -9,20 +9,28 @@ import { HelpCircle } from "lucide-react";
 const FAQ = () => {
   const faqs = [
     {
-      question: "What languages does Kael support?",
-      answer: "Kael currently supports over 30 languages, including English, Chinese, German, French, and Japanese.",
+      question: "Which papers are supported?",
+      answer: "Any PDF, especially those with figures, models, or workflows.",
     },
     {
-      question: "Is my data secure?",
-      answer: "Absolutely. All uploaded documents and notes are private to you. None of your data is ever used to train our models.",
+      question: "Can I edit the dynamic content?",
+      answer: "Yes—adjust charts, animations, and annotations freely.",
     },
     {
-      question: "How is Kael different from just uploading a PDF to ChatGPT?",
-      answer: "Kael is purpose-built for academic work—it delivers more accurate formula recognition, better long-document handling, professional citation tracking, and an integrated paper recommendation system.",
+      question: "Do I need raw data?",
+      answer: "No. AI extracts data automatically. Raw data improves accuracy but is optional.",
+    },
+    {
+      question: "How is data secured?",
+      answer: "Everything is encrypted and accessible only to you.",
+    },
+    {
+      question: "Can I use a custom domain?",
+      answer: "Available for Pro and Institutional plans.",
     },
     {
       question: "Is there a free trial?",
-      answer: "Yes! New users can upload up to 10 papers and enjoy 50 conversations—no credit card required.",
+      answer: "Yes. New users can convert 1 full paper for free.",
     },
   ];
 
@@ -39,12 +47,6 @@ const FAQ = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 animate-fade-in-up animation-delay-100 px-4 sm:px-0">
             Frequently Asked Questions
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-neutral-300 mb-8 sm:mb-10 lg:mb-12 px-4 sm:px-0">
-            Still need help?{" "}
-            <a href="#contact" className="text-primary hover:underline font-medium">
-              Contact us.
-            </a>
-          </p>
 
           {/* Accordion */}
           <div className="w-full px-4 sm:px-0">

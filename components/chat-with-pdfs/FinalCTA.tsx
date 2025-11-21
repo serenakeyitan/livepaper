@@ -28,11 +28,11 @@ const FinalCTA = () => {
       <div className="container mx-auto px-10 sm:px-12 lg:px-16 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8 lg:space-y-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight animate-fade-in-up px-4">
-            Ready to take your research to the next level?
+            Make your research truly move
           </h2>
           
           <p className="text-base sm:text-lg lg:text-xl text-neutral-300 animate-fade-in-up animation-delay-200 px-4">
-            Join over 10,000 researchers who use Kael as their intelligent research partner.
+            Join researchers worldwide using dynamic, modern research pages.
           </p>
 
           <div className="flex justify-center pt-4 sm:pt-6 animate-fade-in-up animation-delay-300">
@@ -42,28 +42,28 @@ const FinalCTA = () => {
               className="rounded-xl text-base sm:text-lg lg:text-xl px-10 py-5 sm:px-12 sm:py-6 lg:px-16 lg:py-8 hover:scale-110 transition-transform duration-300 w-full max-w-md sm:w-auto shadow-xl hover:shadow-2xl"
               onClick={handleClick}
             >
-              Get 1 month Pro Plan for free ➜
+              Get 1 Month Pro Plan for Free
             </Button>
           </div>
-
-          <p className="text-sm sm:text-base text-neutral-400 px-4 mt-6 lg:mt-8">
-            No credit card required · Setup in under 1 minute
-          </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-x-4 sm:gap-x-8 gap-y-3 sm:gap-y-4 justify-center items-center pt-4 sm:pt-6 text-sm sm:text-base px-4">
             <div className="flex items-center gap-2 text-white">
               <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
-              <span>7-day money-back guarantee</span>
+              <span>First paper fully free</span>
             </div>
             <div className="flex items-center gap-2 text-white">
               <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
-              <span>Fully encrypted data</span>
+              <span>Encrypted storage</span>
             </div>
             <div className="flex items-center gap-2 text-white">
               <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
-              <span>Cancel anytime</span>
+              <span>Export or delete anytime</span>
             </div>
           </div>
+          
+          <p className="text-sm sm:text-base text-neutral-300 px-4 mt-6 lg:mt-8 animate-fade-in-up animation-delay-400">
+            💡 New users get 3 bonus paper conversions.
+          </p>
         </div>
       </div>
     </section>

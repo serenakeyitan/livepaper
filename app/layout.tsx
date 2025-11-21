@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { ClarityAnalytics } from "@/components/clarity-analytics";
+import { ClarityAnalytics } from "@/lib/analytics/clarity-analytics";
 import "./globals.css";
 
 const siteUrl = "https://www.kael.im";

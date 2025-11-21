@@ -1,4 +1,4 @@
-import { Twitter } from "lucide-react";
+import { Twitter, Github } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,29 +8,32 @@ const Footer = () => {
           {/* Contact */}
           <div className="text-center md:text-left order-2 md:order-1">
             <p className="text-sm sm:text-base text-neutral-400">
-              <span className="font-medium text-white">Contact:</span>{" "}
-              <a href="mailto:support@kael.ai" className="hover:text-primary transition-colors break-all">
-                support@kael.ai
+              <a href="mailto:hello@livepaper.ai" className="hover:text-primary transition-colors break-all">
+                hello@livepaper.ai
               </a>
             </p>
           </div>
 
           {/* Social Links */}
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 order-1 md:order-2">
-            <span className="text-sm sm:text-base text-neutral-400">Follow Us:</span>
             <div className="flex items-center gap-4 sm:gap-6">
               <a 
-                href="#" 
-                className="text-neutral-400 hover:text-primary transition-colors"
-                aria-label="Twitter"
+                href="https://twitter.com/LivePaper" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm sm:text-base text-neutral-400 hover:text-primary transition-colors flex items-center gap-2"
               >
                 <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>@LivePaper</span>
               </a>
               <a 
-                href="#" 
-                className="text-sm sm:text-base text-neutral-400 hover:text-primary transition-colors"
+                href="https://github.com/livepaper" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm sm:text-base text-neutral-400 hover:text-primary transition-colors flex items-center gap-2"
               >
-                WeChat Official Account
+                <Github className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>/livepaper</span>
               </a>
             </div>
           </div>
@@ -38,7 +41,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center md:text-right order-3">
             <p className="text-xs sm:text-sm lg:text-base text-neutral-400">
-              © 2025 Kael.im — All rights reserved.
+              © 2025 LivePaper — All rights reserved.
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
-# Kael Landing Page
+# Chat with PDFs - Kael AI Landing Page
 
-Kael 项目的官方 Landing Page，基于 Next.js 16 构建的现代化 Web 应用。
+Kael AI Research Assistant 的 Chat with PDFs 功能官方 Landing Page，基于 Next.js 16 构建的现代化 Web 应用。
 
 ## 在线访问
 
@@ -54,7 +54,7 @@ bun dev
 
 打开浏览器访问 [http://localhost:3000](http://localhost:3000) 查看页面效果。
 
-修改 `app/page.tsx` 文件即可实时预览更改。
+修改 `app/page.tsx` 或 `components/chat-with-pdfs/` 目录下的组件文件即可实时预览更改。
 
 ### 构建生产版本
 
@@ -73,15 +73,46 @@ npm run lint
 
 ```
 kael-landing-page/
-├── app/                    # Next.js App Router 目录
-│   ├── layout.tsx         # 根布局组件
-│   ├── page.tsx           # 首页组件
-│   └── globals.css        # 全局样式
-├── public/                # 静态资源目录
-├── next.config.ts         # Next.js 配置文件
-├── tailwind.config.ts     # Tailwind CSS 配置
-├── tsconfig.json          # TypeScript 配置
-└── package.json           # 项目依赖配置
+├── app/                           # Next.js App Router 目录
+│   ├── layout.tsx                # 根布局组件
+│   ├── page.tsx                  # 首页组件
+│   ├── globals.css               # 全局样式
+│   ├── robots.ts                 # Robots.txt 配置
+│   └── sitemap.ts                # Sitemap 配置
+├── components/                    # React 组件目录
+│   ├── chat-with-pdfs/          # Chat with PDFs 页面组件
+│   │   ├── Header.tsx            # 页面头部
+│   │   ├── Hero.tsx              # 英雄区块
+│   │   ├── Features.tsx          # 功能展示
+│   │   ├── HowItWorks.tsx        # 使用流程
+│   │   ├── SocialProof.tsx       # 社交证明
+│   │   ├── FAQ.tsx               # 常见问题
+│   │   ├── FinalCTA.tsx          # 最终行动号召
+│   │   ├── Footer.tsx            # 页脚
+│   │   ├── constants.ts          # 常量定义
+│   │   └── gtag-utils.ts         # Google Analytics 工具
+│   └── ui/                       # UI 基础组件 (shadcn/ui)
+│       ├── accordion.tsx
+│       ├── badge.tsx
+│       ├── button.tsx
+│       └── card.tsx
+├── lib/                          # 工具库目录
+│   ├── utils.ts                  # 通用工具函数
+│   └── analytics/                # 分析工具
+│       └── clarity-analytics.tsx # Microsoft Clarity 分析
+├── hooks/                        # React Hooks
+│   └── useScrollAnimation.ts    # 滚动动画 Hook
+├── public/                       # 静态资源目录
+│   ├── chat-with-pdfs/          # Chat with PDFs 相关资源
+│   │   ├── logos/               # 大学 Logo
+│   │   └── *.png, *.jpg         # 图片资源
+│   └── favicon.svg              # 网站图标
+├── next.config.ts                # Next.js 配置文件
+├── tsconfig.json                 # TypeScript 配置
+├── postcss.config.mjs            # PostCSS 配置
+├── eslint.config.mjs             # ESLint 配置
+├── components.json               # shadcn/ui 配置
+└── package.json                  # 项目依赖配置
 ```
 
 ## 部署

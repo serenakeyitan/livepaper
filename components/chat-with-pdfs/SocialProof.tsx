@@ -16,38 +16,46 @@ const SocialProof = () => {
   const [testimonialsRef, testimonialsVisible] = useScrollAnimation();
   const stats = [
     {
-      icon: Users,
-      value: "10,000+",
-      label: "researchers use Kael",
+      icon: FileText,
+      value: "5,000+",
+      label: "LivePapers published",
     },
     {
-      icon: FileText,
-      value: "500,000+",
-      label: "papers analyzed",
+      icon: Users,
+      value: "Higher",
+      label: "reader comprehension",
     },
     {
       icon: Star,
-      value: "4.8 / 5",
-      label: "average rating",
+      value: "4.9/5",
+      label: "satisfaction score",
     },
   ];
 
   const testimonials = [
     {
-      quote: "Finally, a tool that can handle an entire paper library.",
-      detail: "Other apps start breaking after 50 pages — Kael handled 30 review papers effortlessly. It's clearly built for serious research.",
-      author: "Dr. Zhang Wei",
-      title: "PhD Candidate, Tsinghua University",
+      quote: "First time I could truly understand a complex model.",
+      detail: "",
+      author: "Li Ming",
+      title: "CS Master's, Peking University",
       profilePic: PROFILE_ZHANG,
       schoolLogo: SCHOOL_LOGOS.tsinghua,
     },
     {
-      quote: "The formula recognition is spot on.",
-      detail: "As a physics student, Kael's step-by-step explanations have saved me hours every week.",
-      author: "Sarah Chen",
-      title: "MSc Physics, MIT",
+      quote: "Colleagues discuss our work more easily on social platforms.",
+      detail: "",
+      author: "Dr. Sarah Chen",
+      title: "ML Researcher, Stanford",
       profilePic: PROFILE_SARAH,
       schoolLogo: SCHOOL_LOGOS.mit,
+    },
+    {
+      quote: "A new way to communicate research.",
+      detail: "",
+      author: "Prof. Zhang Wei",
+      title: "AI Lab Director, Tsinghua University",
+      profilePic: PROFILE_ZHANG,
+      schoolLogo: SCHOOL_LOGOS.tsinghua,
     },
   ];
 
@@ -82,7 +90,7 @@ const SocialProof = () => {
       {/* Testimonials Section */}
       <section ref={testimonialsRef} className={`w-full py-12 sm:py-16 lg:py-24 transition-colors dark:bg-neutral-900 ${testimonialsVisible ? 'animate-on-scroll visible' : 'animate-on-scroll'}`} style={{backgroundImage: 'linear-gradient(to bottom, white 0%, rgb(229 229 229) 15%, rgb(163 163 163) 35%, rgb(115 115 115) 55%, rgb(64 64 64) 75%, rgb(23 23 23) 100%)'}}>
         <div className="container mx-auto px-10 sm:px-12 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 max-w-6xl mx-auto items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-6xl mx-auto items-stretch">
             {testimonials.map((testimonial, index) => (
               <div key={testimonial.author} className={`relative h-full animate-fade-in-up ${index === 0 ? 'animation-delay-200' : 'animation-delay-400'}`}>
                 <Card className="border-2 border-neutral-300 dark:border-neutral-700 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 overflow-visible h-full flex flex-col bg-white dark:bg-neutral-800/50">
@@ -96,9 +104,11 @@ const SocialProof = () => {
                       <p className="text-lg sm:text-xl lg:text-2xl font-bold text-neutral-900 dark:text-white leading-relaxed">
                         "{testimonial.quote}"
                       </p>
-                      <p className="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                        {testimonial.detail}
-                      </p>
+                      {testimonial.detail && (
+                        <p className="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                          {testimonial.detail}
+                        </p>
+                      )}
                     </blockquote>
                     <div className="pt-3 sm:pt-4 lg:pt-5 border-t border-neutral-200 dark:border-neutral-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
                       <div className="flex items-center gap-3 sm:gap-4">
