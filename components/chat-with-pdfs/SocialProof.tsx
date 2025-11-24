@@ -6,8 +6,11 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const PROFILE_ZHANG = "/chat-with-pdfs/profile-zhang.jpg";
 const PROFILE_SARAH = "/chat-with-pdfs/profile-sarah.jpg";
+const PROFILE_LIMING = "/chat-with-pdfs/profile-liming.jpg";
 const SCHOOL_LOGOS = {
   tsinghua: "/chat-with-pdfs/logos/tsinghua-new.png",
+  peking: "/chat-with-pdfs/logos/peking.png",
+  stanford: "/chat-with-pdfs/logos/Stanford_Cardinal_logo.svg.png",
   mit: "/chat-with-pdfs/logos/mit-full.png",
 } as const;
 
@@ -34,23 +37,23 @@ const SocialProof = () => {
 
   const testimonials = [
     {
-      quote: "First time I could truly understand a complex model.",
+      quote: "It's the first time I've truly understood a complex model.",
       detail: "",
       author: "Li Ming",
       title: "CS Master's, Peking University",
-      profilePic: PROFILE_ZHANG,
-      schoolLogo: SCHOOL_LOGOS.tsinghua,
+      profilePic: PROFILE_LIMING,
+      schoolLogo: SCHOOL_LOGOS.peking,
     },
     {
-      quote: "Colleagues discuss our work more easily on social platforms.",
+      quote: "Colleagues understand and discuss our research much more easily on social media.",
       detail: "",
       author: "Dr. Sarah Chen",
-      title: "ML Researcher, Stanford",
+      title: "ML Researcher, Stanford University",
       profilePic: PROFILE_SARAH,
-      schoolLogo: SCHOOL_LOGOS.mit,
+      schoolLogo: SCHOOL_LOGOS.stanford,
     },
     {
-      quote: "A new way to communicate research.",
+      quote: "This is an entirely new way to express academic work.",
       detail: "",
       author: "Prof. Zhang Wei",
       title: "AI Lab Director, Tsinghua University",
@@ -126,8 +129,8 @@ const SocialProof = () => {
                           </div>
                         </div>
                       </div>
-                      <img 
-                        src={testimonial.schoolLogo} 
+<img
+                        src={testimonial.schoolLogo}
                         alt="University Logo"
                         className="h-8 sm:h-10 lg:h-12 object-contain opacity-70 flex-shrink-0"
                       />

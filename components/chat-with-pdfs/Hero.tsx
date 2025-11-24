@@ -5,7 +5,7 @@ import { START_FOR_FREE_URL } from "./constants";
 import { gtagSendEvent } from "./gtag-utils";
 import { Check } from "lucide-react";
 
-const HERO_IMAGE = "/chat-with-pdfs/kael_interface_1_bw.png";
+const HERO_IMAGE = "/chat-with-pdfs/kael_full_page.png";
 const WEB_EXTENSION_ICON = "/chat-with-pdfs/web-extension-icon.png";
 const LOGOS = {
   tsinghua: "/chat-with-pdfs/logos/tsinghua.png",
@@ -58,11 +58,11 @@ const Hero = () => {
 
             {/* Right Column - Hero Image */}
             <div className="relative animate-fade-in-right animation-delay-200 mt-4 lg:mt-0">
-              <div className="relative rounded-2xl overflow-visible p-2 sm:p-4">
-                <img 
-                  src={HERO_IMAGE} 
-                  alt="AI Research Assistant Interface showing multi-document conversation" 
-                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={HERO_IMAGE}
+                  alt="Kael.im - Interactive quaternion visualization showing dynamic research paper"
+                  className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
             </div>

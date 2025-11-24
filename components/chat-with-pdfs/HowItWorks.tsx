@@ -9,6 +9,9 @@ import {
   ExternalLink,
   Plus,
   CheckCircle,
+  BarChart3,
+  Image as ImageIcon,
+  Play,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -37,7 +40,7 @@ const HowItWorks = () => {
               Three steps to transform your paper
             </h2>
             <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300">
-              Upload once, and let LivePaper turn static PDFs into interactive, shareable research experiences.
+              Upload your PDF, and LivePaper automatically transforms it into an interactive, shareable research experience.
             </p>
           </div>
 
@@ -56,10 +59,10 @@ const HowItWorks = () => {
                   </div>
                   <div>
                     <p className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">
-                      Step 1 — Upload PDF
+                      Step 1 — Upload Your PDF
                     </p>
                     <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                      Drag and drop, paste a link, or import from cloud storage.
+                      Drop a single PDF file—your research paper in one document.
                     </p>
                   </div>
                 </div>
@@ -68,24 +71,16 @@ const HowItWorks = () => {
                 </Badge>
               </div>
 
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-4">
-                <div className="rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/60 p-4 flex items-start gap-3">
-                  <FileText className="w-6 h-6 text-primary" />
-                  <div>
-                    <p className="font-semibold text-neutral-900 dark:text-white">paper_01.pdf</p>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400">2.4 MB • 24 pages</p>
+              <div className="mt-6">
+                <div className="rounded-2xl border-2 border-primary/30 bg-primary/5 dark:bg-primary/10 p-6 flex items-center gap-4">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/20">
+                    <FileText className="w-8 h-8 text-primary" />
                   </div>
-                </div>
-                <div className="rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/60 p-4 flex items-start gap-3">
-                  <FileText className="w-6 h-6 text-primary" />
-                  <div>
-                    <p className="font-semibold text-neutral-900 dark:text-white">paper_02.pdf</p>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400">1.8 MB • 16 pages</p>
+                  <div className="flex-1">
+                    <p className="font-bold text-lg text-neutral-900 dark:text-white">attention_is_all_you_need.pdf</p>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-400">2.4 MB • 15 pages • Ready to transform</p>
                   </div>
-                </div>
-                <div className="rounded-2xl border-2 border-dashed border-neutral-300 dark:border-neutral-700 bg-transparent p-4 flex flex-col items-center justify-center text-neutral-400">
-                  <Plus className="w-6 h-6" />
-                  <p className="text-sm mt-1">Add more</p>
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
                 </div>
               </div>
             </div>
@@ -104,10 +99,10 @@ const HowItWorks = () => {
                   </div>
                   <div>
                     <p className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">
-                      Step 2 — AI Reconstruction
+                      Step 2 — AI Visualizes Content
                     </p>
                     <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                      Interactive charts, animations, and explanations appear instantly.
+                      Charts, data, and concepts are automatically extracted and made interactive.
                     </p>
                   </div>
                 </div>
@@ -116,29 +111,33 @@ const HowItWorks = () => {
                 </Badge>
               </div>
 
-              <div className="mt-6 space-y-4">
-                <div className="rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/60 p-4">
-                  <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
-                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-white text-xs font-bold">
-                      K
+              <div className="mt-6">
+                <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                  {/* Interactive Chart */}
+                  <div className="rounded-lg sm:rounded-xl border border-primary/20 bg-white dark:bg-neutral-800/50 p-2 sm:p-3 flex flex-col items-center justify-center min-h-[100px] sm:min-h-[140px]">
+                    <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-blue-500/10 flex items-center justify-center mb-1 sm:mb-2">
+                      <BarChart3 className="w-5 h-5 sm:w-8 sm:h-8 text-blue-500" />
                     </div>
-                    Question
+                    <p className="text-[10px] sm:text-xs font-medium text-neutral-700 dark:text-neutral-300 text-center">Interactive Chart</p>
+                    <p className="text-[8px] sm:text-[10px] text-neutral-500 dark:text-neutral-500 mt-0.5 hidden sm:block">Data Visualization</p>
                   </div>
-                  <p className="mt-2 font-semibold text-neutral-900 dark:text-white">
-                    What does this equation represent?
-                  </p>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-300 italic">hₜ = RNN_enc(xₜ, hₜ₋₁)</p>
-                </div>
 
-                <div className="rounded-2xl border border-primary/30 bg-primary/5 p-4 space-y-3">
-                  <p className="text-sm text-primary font-medium">LivePaper Response</p>
-                  <p className="text-neutral-900 dark:text-white">
-                    This is the encoder hidden state equation from an RNN. It keeps context from every previous token
-                    so the model can interpret the entire sequence.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-primary/15 text-primary border border-primary/20">RNN Component</Badge>
-                    <Badge variant="secondary" className="text-xs">Sequential Processing</Badge>
+                  {/* Extracted Image */}
+                  <div className="rounded-lg sm:rounded-xl border border-primary/20 bg-white dark:bg-neutral-800/50 p-2 sm:p-3 flex flex-col items-center justify-center min-h-[100px] sm:min-h-[140px]">
+                    <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-purple-500/10 flex items-center justify-center mb-1 sm:mb-2">
+                      <ImageIcon className="w-5 h-5 sm:w-8 sm:h-8 text-purple-500" />
+                    </div>
+                    <p className="text-[10px] sm:text-xs font-medium text-neutral-700 dark:text-neutral-300 text-center">Diagram</p>
+                    <p className="text-[8px] sm:text-[10px] text-neutral-500 dark:text-neutral-500 mt-0.5 hidden sm:block">Visual Content</p>
+                  </div>
+
+                  {/* Video Content */}
+                  <div className="rounded-lg sm:rounded-xl border border-primary/20 bg-white dark:bg-neutral-800/50 p-2 sm:p-3 flex flex-col items-center justify-center min-h-[100px] sm:min-h-[140px]">
+                    <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-orange-500/10 flex items-center justify-center mb-1 sm:mb-2">
+                      <Play className="w-5 h-5 sm:w-8 sm:h-8 text-orange-500" />
+                    </div>
+                    <p className="text-[10px] sm:text-xs font-medium text-neutral-700 dark:text-neutral-300 text-center">Animation</p>
+                    <p className="text-[8px] sm:text-[10px] text-neutral-500 dark:text-neutral-500 mt-0.5 hidden sm:block">Motion Graphics</p>
                   </div>
                 </div>
               </div>
@@ -200,11 +199,8 @@ const HowItWorks = () => {
                     Publish LivePaper
                   </Button>
                   <Button
-                    className="w-full sm:w-auto"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      gtagSendEvent(START_FOR_FREE_URL);
-                    }}
+                    className="w-full sm:w-auto bg-neutral-400 hover:bg-neutral-400 cursor-not-allowed opacity-60"
+                    disabled
                   >
                     Export as Interactive Page
                   </Button>
