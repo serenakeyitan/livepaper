@@ -33,6 +33,22 @@ const Hero = () => {
                 Upload a PDF and LivePaper transforms static research into an animated, interactive experience.
               </p>
 
+              {/* Feature Checkmarks */}
+              <div className="flex flex-col gap-3 mb-8 lg:mb-0 lg:pt-8 animate-fade-in-up animation-delay-250 max-w-xl mx-auto lg:mx-0">
+                <div className="flex items-center gap-3 text-neutral-700 dark:text-neutral-300">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0" strokeWidth={3} />
+                  <span className="text-base sm:text-lg">Interactive visuals</span>
+                </div>
+                <div className="flex items-center gap-3 text-neutral-700 dark:text-neutral-300">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0" strokeWidth={3} />
+                  <span className="text-base sm:text-lg">Concept animations</span>
+                </div>
+                <div className="flex items-center gap-3 text-neutral-700 dark:text-neutral-300">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0" strokeWidth={3} />
+                  <span className="text-base sm:text-lg">Multimodal knowledge</span>
+                </div>
+              </div>
+
               {/* CTA Button - Mobile: Bigger and centered */}
               <div className="mb-6 lg:mb-8 lg:pt-12 animate-fade-in-up animation-delay-300 flex justify-center lg:justify-start w-full">
                 <Button
